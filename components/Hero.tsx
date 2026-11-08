@@ -131,8 +131,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          4.5+ years crafting scalable microservices, leading platform migrations,
-          and building cloud-native solutions that power production systems.
+          I build backend systems that actually hold up under pressure — microservices, 
+          cloud infra, and the boring-but-critical platform work that keeps everything running.
         </motion.p>
 
         {/* CTA Buttons */}

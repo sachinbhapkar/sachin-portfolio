@@ -117,7 +117,7 @@ export default function Skills() {
         <SectionHeader
           tag="Expertise"
           title="Technical Skills"
-          subtitle="A comprehensive toolkit for building, deploying, and operating scalable backend systems."
+          subtitle="Things I actually use day-to-day, not just things I've heard of."
         />
 
         <div ref={ref} className="grid md:grid-cols-2 gap-6">

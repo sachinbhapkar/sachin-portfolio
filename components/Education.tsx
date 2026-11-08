@@ -18,7 +18,7 @@ export default function Education() {
         <SectionHeader
           tag="Academic Background"
           title="Education"
-          subtitle="The foundation that fueled my passion for software engineering."
+          subtitle="Where it all started."
         />
 
         <div ref={ref} className="max-w-3xl mx-auto">

@@ -14,6 +14,7 @@ const experiences = [
     period: "Mar 2026 – Present",
     color: "from-blue-500 to-cyan-500",
     current: true,
+    note: null,
     bullets: [
       "Built and integrated 10+ serverless REST APIs on AWS API Gateway and Lambda, adopted by an internal engineering team of 10+.",
       "Helped modernize a legacy 32-bit Microsoft Access application by migrating and consolidating 200+ source tables into 50+ AWS PostgreSQL tables.",
@@ -29,6 +30,7 @@ const experiences = [
     period: "May 2022 – Feb 2026",
     color: "from-indigo-500 to-purple-500",
     current: false,
+    note: "Joined as Software Engineer at Operative Media; organisation subsequently rebadged under Persistent Systems.",
     bullets: [
       "Led a 3-member core platform team responsible for foundational microservices, backend architecture, and scalability/performance improvements.",
       "Migrated legacy Zuul Gateway to Spring Cloud Gateway and modernized Spring Cloud microservices to Java 17 and Spring Boot 3.4.x.",
@@ -60,7 +62,7 @@ export default function Experience() {
         <SectionHeader
           tag="Career"
           title="Work Experience"
-          subtitle="A track record of leading high-impact backend engineering projects."
+          subtitle="Places I've worked, things I've shipped, and problems I've helped fix."
         />
 
         <div ref={ref} className="relative">
@@ -128,6 +130,13 @@ export default function Experience() {
                         {exp.location}
                       </span>
                     </div>
+
+                    {/* Context note */}
+                    {exp.note && (
+                      <p className="text-xs text-slate-500 italic mb-4 pl-1 border-l-2 border-slate-700">
+                        {exp.note}
+                      </p>
+                    )}
 
                     {/* Bullets */}
                     <ul className="space-y-3 mb-5">

@@ -82,7 +82,7 @@ export default function Contact() {
         <SectionHeader
           tag="Get In Touch"
           title="Let's Connect"
-          subtitle="Open to new opportunities, collaborations, and interesting backend engineering challenges."
+          subtitle="Whether it's a job, a side project, or just a chat about backend architecture — feel free to reach out."
         />
 
         <div ref={ref} className="max-w-4xl mx-auto">
@@ -104,12 +104,12 @@ export default function Contact() {
               </div>
 
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Ready to build something{" "}
-                <span className="gradient-text">great together?</span>
+                Got something in mind?{" "}
+                <span className="gradient-text">Let&apos;s talk.</span>
               </h3>
               <p className="text-slate-400 text-lg max-w-xl mx-auto mb-8 leading-relaxed">
-                Whether you have a role in mind, a project to discuss, or just
-                want to say hi — my inbox is always open.
+                I&apos;m actively looking for new opportunities. If you think I could be a good fit,
+                or just want to say hello — my inbox is always open.
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center">

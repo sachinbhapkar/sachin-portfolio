@@ -15,33 +15,33 @@ import {
 const highlights = [
   {
     icon: Briefcase,
-    title: "Platform Leadership",
-    desc: "Led 3-member core platform team at Persistent Systems managing 40+ microservice ecosystem",
+    title: "Platform Work",
+    desc: "Led the core platform team at Persistent Systems — the team responsible for things other teams depend on",
   },
   {
     icon: Zap,
-    title: "Migration Expert",
-    desc: "Migrated Zuul to Spring Cloud Gateway, upgraded to Java 17 & Spring Boot 3.4.x",
+    title: "Migrations Done Right",
+    desc: "Zuul → Spring Cloud Gateway, Java 11 → Java 17, Spring Boot 2.x → 3.4.x — all in production",
   },
   {
     icon: Shield,
-    title: "Security Focus",
-    desc: "Remediated CodeQL, CSPM, and AVA findings improving security and compliance posture",
+    title: "Security Mindset",
+    desc: "Dealt with CodeQL, CSPM, AVA findings — not just flagging them but actually fixing them",
   },
   {
     icon: Users,
-    title: "Team Player",
-    desc: "Built APIs adopted by 10+ engineers; automated workflows reducing manual effort by 90%+",
+    title: "Team First",
+    desc: "Built APIs used by 10+ engineers, automated workflows that saved hours of manual work every week",
   },
   {
     icon: Coffee,
-    title: "Cloud Native",
-    desc: "Hands-on with AWS Lambda, API Gateway, S3, Redis/ElastiCache, HashiCorp Vault",
+    title: "Cloud Hands-On",
+    desc: "AWS Lambda, API Gateway, S3, Redis, HashiCorp Vault — not just on slides, in production",
   },
   {
     icon: MapPin,
-    title: "Based in Pune",
-    desc: "Working at the intersection of backend engineering and cloud infrastructure in India",
+    title: "Pune, India",
+    desc: "Open to remote and hybrid opportunities — timezone flexible for the right role",
   },
 ];
 
@@ -109,7 +109,7 @@ export default function About() {
         <SectionHeader
           tag="Who I Am"
           title="About Me"
-          subtitle="Building robust backend systems that scale — from microservices architecture to cloud infrastructure."
+          subtitle="Building reliable backend systems — the kind that don't wake you up at 3am."
         />
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -124,28 +124,27 @@ export default function About() {
             <p className="text-slate-300 text-lg leading-relaxed">
               I'm a Java backend engineer with{" "}
               <span className="text-blue-400 font-semibold">4.5+ years</span> of
-              experience building and scaling Spring Boot and Spring Cloud
-              microservices. I specialize in designing distributed systems that
-              are reliable, observable, and maintainable.
+              experience. I've spent most of that time in the microservices world — 
+              writing Spring Boot services, dealing with distributed systems headaches, 
+              and trying to make things simpler for the teams around me.
             </p>
             <p className="text-slate-400 leading-relaxed">
               At{" "}
               <span className="text-cyan-400 font-semibold">
                 Persistent Systems
               </span>
-              , I led a core platform team of 3, owning gateway migration,
-              framework upgrades, distributed tracing, backup/restore tooling,
-              and tenant lifecycle automation across a 40+ team microservice
-              ecosystem.
+              , I ended up leading a small core platform team. We owned the stuff 
+              nobody wants to touch — gateway migrations, framework upgrades, tracing 
+              setup, backup tooling, tenant automation. It was unglamorous work, but it 
+              made life better for 40+ teams.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              Currently at{" "}
+              Now at{" "}
               <span className="text-cyan-400 font-semibold">
                 Principal Global Services
               </span>
-              , I'm building serverless REST APIs on AWS, modernizing legacy
-              systems, and remediating security findings to improve compliance
-              posture.
+              , I'm building serverless APIs on AWS, cleaning up old systems, 
+              and fixing security findings that accumulated over the years.
             </p>
 
             {/* Tech stack row */}
