@@ -82,11 +82,12 @@ export default function TerminalBar() {
         <div className="ml-auto flex-shrink-0">
           <a
             href="/sachin_resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1 text-xs font-mono text-green-400 hover:text-green-300 border border-green-800 hover:border-green-600 rounded mr-2 transition-colors"
+            download="Sachin_Bhapkar_Resume.pdf"
+            className="px-3 py-1 text-xs font-mono text-green-400 hover:text-green-300 border border-green-800 hover:border-green-600 rounded mr-2 transition-colors flex items-center gap-1.5"
+            title="Download Resume"
           >
-            $ cat resume.pdf
+            <span>↓</span>
+            <span>wget resume.pdf</span>
           </a>
         </div>
       </div>
