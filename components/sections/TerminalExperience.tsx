@@ -95,20 +95,33 @@ export default function TerminalExperience() {
                   <span className="text-blue-400">&quot;company&quot;</span>
                   <span className="text-slate-500">: </span>
                   <span className="text-amber-300">&quot;{exp.company}&quot;</span>
-                  {exp.current && <span className="ml-2 text-green-400 text-xs">// CURRENT</span>}
+                  <span className="text-slate-500">,</span>
+                </p>
+                <p>
+                  <span className="text-blue-400">&quot;current&quot;</span>
+                  <span className="text-slate-500">: </span>
+                  <span className="text-purple-400">{exp.current ? "true" : "false"}</span>
+                  <span className="text-slate-500">,</span>
                 </p>
                 <p>
                   <span className="text-blue-400">&quot;role&quot;</span>
                   <span className="text-slate-500">: </span>
                   <span className="text-amber-300">&quot;{exp.role}&quot;</span>
+                  <span className="text-slate-500">,</span>
                 </p>
                 <p>
                   <span className="text-blue-400">&quot;period&quot;</span>
                   <span className="text-slate-500">: </span>
                   <span className="text-amber-300">&quot;{exp.period}&quot;</span>
+                  <span className="text-slate-500">,</span>
                 </p>
                 {exp.note && (
-                  <p className="text-slate-600 italic text-xs">// {exp.note}</p>
+                  <p>
+                    <span className="text-blue-400">&quot;note&quot;</span>
+                    <span className="text-slate-500">: </span>
+                    <span className="text-amber-300">&quot;{exp.note}&quot;</span>
+                    <span className="text-slate-500">,</span>
+                  </p>
                 )}
                 <div>
                   <span className="text-blue-400">&quot;highlights&quot;</span>
