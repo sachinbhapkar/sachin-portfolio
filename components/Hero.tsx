@@ -91,15 +91,15 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        {/* Badge */}
+        {/* Badge — Spring Boot actuator health style */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-mono mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Available for opportunities
+          GET /actuator/health → {`{ "status": "UP" }`}
         </motion.div>
 
         {/* Name */}
@@ -226,6 +226,29 @@ export default function Hero() {
               <div className="text-xs text-slate-500 mt-1">{stat.label}</div>
             </div>
           ))}
+        </motion.div>
+
+        {/* Spring Boot controller flavor snippet */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.85 }}
+          className="mt-8 inline-block"
+        >
+          <div className="text-left font-mono text-xs text-slate-600 bg-slate-900/50 rounded-lg px-4 py-3 border border-slate-800 inline-block">
+            <span className="text-blue-400">@RestController</span>
+            <br />
+            <span className="text-purple-400">@RequestMapping</span>
+            <span className="text-slate-400">{`("/api/sachin")`}</span>
+            <br />
+            <span className="text-slate-500">{"public class "}</span>
+            <span className="text-yellow-400">SachinBhapkar</span>
+            <span className="text-slate-500">{" {"}</span>
+            <br />
+            <span className="text-slate-600 ml-4">{"// 4.5+ years of shipped code"}</span>
+            <br />
+            <span className="text-slate-500">{"}"}</span>
+          </div>
         </motion.div>
       </div>
 

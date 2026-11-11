@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -132,4 +133,9 @@ body {
 .section-divider {
   background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), rgba(6, 182, 212, 0.5), transparent);
   height: 1px;
+}
+
+/* Terminal font utility */
+.font-terminal {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
 }
