@@ -3,13 +3,12 @@
 import { useState } from "react";
 import SpringBootLoader from "@/components/SpringBootLoader";
 import Terminal from "@/components/Terminal";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Education from "@/components/Education";
-import Contact from "@/components/Contact";
+import TerminalBar from "@/components/TerminalBar";
+import TerminalHero from "@/components/sections/TerminalHero";
+import TerminalExperience from "@/components/sections/TerminalExperience";
+import TerminalSkills from "@/components/sections/TerminalSkills";
+import TerminalEducation from "@/components/sections/TerminalEducation";
+import TerminalContact from "@/components/sections/TerminalContact";
 
 export default function Home() {
   const [booted, setBooted] = useState(false);
@@ -17,35 +16,34 @@ export default function Home() {
   return (
     <>
       <SpringBootLoader onComplete={() => setBooted(true)} />
-      <main
-        className={`relative min-h-screen bg-[#0f172a] overflow-hidden transition-opacity duration-500 ${
-          booted ? "opacity-100" : "opacity-0"
+      <div
+        className={`min-h-screen bg-[#0d1117] transition-opacity duration-700 ${
+          booted ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        {/* Global background elements */}
-        <div className="fixed inset-0 bg-grid pointer-events-none z-0" />
-        <div className="fixed top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none z-0" />
-        <div className="fixed bottom-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none z-0" />
+        {/* Subtle scanlines overlay */}
+        <div className="fixed inset-0 scanlines pointer-events-none z-10" />
 
-        <Navbar />
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Education />
-        <Contact />
+        <TerminalBar />
 
-        {/* Footer */}
-        <footer className="relative z-10 py-8 text-center border-t border-slate-800">
-          <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Sachin Bhapkar. Built with Next.js &
-            Tailwind CSS.
-          </p>
-        </footer>
+        {/* Main scrollable terminal content */}
+        <main className="relative z-20 pt-20 pb-16">
+          <TerminalHero />
+          <TerminalExperience />
+          <TerminalSkills />
+          <TerminalEducation />
+          <TerminalContact />
 
-        {/* Floating Terminal */}
+          {/* Footer */}
+          <footer className="mt-8 py-6 px-4 md:px-8 max-w-5xl mx-auto border-t border-slate-800/60 font-mono text-xs text-slate-700">
+            <p>// sachin bhapkar · portfolio v2.0.0 · built with next.js + tailwind</p>
+            <p className="mt-1">// © {new Date().getFullYear()} · MIT License · <a href="https://github.com/sachinbhapkar" className="term-link">github.com/sachinbhapkar</a></p>
+          </footer>
+        </main>
+
+        {/* Floating terminal easter egg */}
         <Terminal />
-      </main>
+      </div>
     </>
   );
 }
