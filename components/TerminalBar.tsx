@@ -21,17 +21,25 @@ export default function TerminalBar() {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); });
-      },
-      { threshold: 0.3 }
-    );
-    sections.forEach((s) => {
-      const el = document.getElementById(s.id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+    const updateActive = () => {
+      // If at the very top, always highlight hero
+      if (window.scrollY < 50) {
+        setActive("hero");
+        return;
+      }
+      // Find the last section whose top is above the middle of the viewport
+      const mid = window.scrollY + window.innerHeight / 2;
+      let current = "hero";
+      sections.forEach((s) => {
+        const el = document.getElementById(s.id);
+        if (el && el.offsetTop <= mid) current = s.id;
+      });
+      setActive(current);
+    };
+
+    updateActive(); // run once on mount
+    window.addEventListener("scroll", updateActive, { passive: true });
+    return () => window.removeEventListener("scroll", updateActive);
   }, []);
 
   const scrollTo = (id: string) => {
