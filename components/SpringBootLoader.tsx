@@ -96,16 +96,6 @@ export default function SpringBootLoader({ onComplete }: SpringBootLoaderProps) 
   }, [onComplete]);
 
   useEffect(() => {
-    // Check localStorage — if already shown, skip immediately
-    try {
-      if (localStorage.getItem("sb_boot_shown") === "true") {
-        onComplete();
-        return;
-      }
-    } catch {
-      // localStorage unavailable
-    }
-
     setVisible(true);
 
     // Show logo after 200ms
@@ -136,11 +126,6 @@ export default function SpringBootLoader({ onComplete }: SpringBootLoaderProps) 
 
     // Auto-transition after 1.5s from last line
     const exitTimer = setTimeout(() => {
-      try {
-        localStorage.setItem("sb_boot_shown", "true");
-      } catch {
-        // ignore
-      }
       triggerExit();
     }, statusDelay2 + 1500);
 
